@@ -212,7 +212,7 @@ while(n){
 ## Gray code Leetcode -89
 ```
    ##approach 1 using recursion
-<!--    but it  this is naive approach  and complexity is height to this approach that is why preferable solution is approach 2-->
+<!--    but   this is naive approach  and complexity is height to this approach that is why preferable solution is approach 2-->
    public ArrayList<String>solution(int n){
    if(n==1){
       ArrayList<String>bres=new ArrayList<>();
@@ -232,5 +232,32 @@ while(n){
      }
      return mres;
    } 
+      ##approach 2 using itertor and simple method i.e without recursion
+      In this approach the trick behind this is that 
+      for n=2;
+      first is 0 starting point
+      (0|2^0)or(2^0-1|2^0),
+      (1|2^1,0|2^1),
+      for n=3;
+      first is 0 starting point
+      (0|2^0)or(2^0-1|2^0),
+      (1|2^1,0|2^1),
+      ((2^2-1)|2^2,(2^2-2|2^2),(2^2-3|2^2),(2^2-4|2^2)),
+     
+     observation :  (2^i-j|2^n) i.e i>=0,j>=0 changing variable size , power of 2 means i
+                    size-1 get or(|) by power of 2
+     
+     
+      public List<Integer> grayCode(int n) {
+      List<Integer> rs=new ArrayList<Integer>();
+      rs.add(0);
+      for(int i=0;i<n;i++){
+        int size=rs.size();
+        for(int k=size-1;k>=0;k--)
+            rs.add(rs.get(k) | 1<<i);
+       }
+    return rs;
+}
+
 ```
 
