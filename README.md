@@ -206,3 +206,31 @@ while(n){
     count++;
 }
 ```
+<!-- ///////////////////question practice////////////////////////////// -->
+<!-- gray code -->
+
+## Gray code Leetcode -89
+```
+   ##approach 1 using recursion
+<!--    but it  this is naive approach  and complexity is height to this approach that is why preferable solution is approach 2-->
+   public ArrayList<String>solution(int n){
+   if(n==1){
+      ArrayList<String>bres=new ArrayList<>();
+      bres.add("0");
+      bres.add("1");
+      return bres;
+     }
+   ArrayList<String>rres=solution(n-1);
+   ArrayList<String>mres=new ArrayList<>():
+   for(int i=0;i<rres.size();i++){
+     String rstr=rres.get(i);
+     mres.add("0"+rstr);
+     }
+     for(int i=rres.size()-1;i>=0;i--){
+     String rstr=rres.get(i);
+     mres.add("1"+rstr);
+     }
+     return mres;
+   } 
+```
+
