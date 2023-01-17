@@ -1,6 +1,7 @@
 # Bit Manipulation Cheat Sheet
-##  Bits are On,Off,Toggle,Check
-```javaint n = scn.nextInt();
+## You can be asked to On,Off,Toggle,Check (set,unset,update,check) particular bit of a binary number at a certain position. 
+```javaint 
+    n = scn.nextInt();
     int i = scn.nextInt();
     int j = scn.nextInt();
     int k = scn.nextInt();
@@ -14,10 +15,26 @@
     System.out.println(n | mask1);
     System.out.println(n & (~mask2));
     System.out.println(n ^ mask3);
-    System.out.println((n & mask4) == 0 ?  false : true);
+    System.out.println((n & mask4) == 0 ?  false : true);//chech the mth bit is on or off 0 means ith bit is not set
     ```
+## clear the range i to j 
+```java
+int a=(~0)<<(j+1);
+int b=(1<<i)-1;
+int mask=a|b;
+int ans=n&mask;
+return ans;
+```
+## find Right Most set bit mask
+```java
+int rsbm=n&-n;
+```
+## Kernighan's Algorithm to count set bits in a number
+```java
+
+```
 ## Check if two integers have opposite signs
-```c++
+```java
 if(x^y >0)
     return false;
 else
