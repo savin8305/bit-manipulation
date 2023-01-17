@@ -31,7 +31,11 @@ int rsbm=n&-n;
 ```
 ## Kernighan's Algorithm to count set bits in a number
 ```java
-
+while(n!=0){
+  int rsbm=n&-n;
+  n-=rsbm;
+  counter++;
+  }
 ```
 ## Check if two integers have opposite signs
 ```java
