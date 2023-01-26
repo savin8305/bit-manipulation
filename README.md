@@ -1,7 +1,8 @@
 # Bit Manipulation Cheat Sheet
 ## You can be asked to On,Off,Toggle,Check (set,unset,update,check) particular bit of a binary number at a certain position. 
-```javaint 
-    n = scn.nextInt();
+```java
+ 
+    int n = scn.nextInt();
     int i = scn.nextInt();
     int j = scn.nextInt();
     int k = scn.nextInt();
@@ -18,7 +19,7 @@
     System.out.println((n & mask4) == 0 ?  false : true);//check the mth bit is on or off 0 means ith bit is not set
     ```
 ## clear the range i to j 
-```
+```java
 int a=(~0)<<(j+1);
 int b=(1<<i)-1;
 int mask=a|b;
