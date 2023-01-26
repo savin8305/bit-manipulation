@@ -15,7 +15,7 @@
     System.out.println(n | mask1);
     System.out.println(n & (~mask2));
     System.out.println(n ^ mask3);
-    System.out.println((n & mask4) == 0 ?  false : true);//chech the mth bit is on or off 0 means ith bit is not set
+    System.out.println((n & mask4) == 0 ?  false : true);//check the mth bit is on or off 0 means ith bit is not set
     ```
 ## clear the range i to j 
 ```java
