@@ -18,7 +18,7 @@
     System.out.println((n & mask4) == 0 ?  false : true);//check the mth bit is on or off 0 means ith bit is not set
     ```
 ## clear the range i to j 
-```java
+```
 int a=(~0)<<(j+1);
 int b=(1<<i)-1;
 int mask=a|b;
