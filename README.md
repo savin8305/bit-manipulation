@@ -210,7 +210,8 @@ while(n){
 <!-- ///////////////////question practice////////////////////////////// -->
 <!-- gray code -->
 ##  HOW TO FIND SIMILAR WORD IN STRING ARRAY USING MASK
-``class Solution {
+```JAVA
+class Solution {
   public int similarPairs(String[] words) {
     int ans = 0;
     int[] masks = new int[words.length];
